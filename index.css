@@ -1,0 +1,65 @@
+:root {
+  --background-base: #000;
+  --background-highlight: #121212;
+  --background-press: #191919;
+  --background-tinted-highlight: #282828;
+  --background-elevated-highlight: #282828;
+  --text-base: #ffffff;
+  --text-subdued: #b3b3b3;
+  --essential-base: #1DB954;
+  --essential-bright-accent: #1ed760;
+  --background-base-alpha: rgba(0,0,0,0.7);
+  --background-press-alpha: rgba(25, 25, 25, 0.8);
+}
+
+body[data-theme="light"] {
+  --background-base: #ffffff;
+  --background-highlight: #f9f9f9;
+  --background-press: #f0f0f0;
+  --background-tinted-highlight: #e0e0e0;
+  --background-elevated-highlight: #ffffff;
+  --text-base: #000000;
+  --text-subdued: #535353;
+  --essential-base: #1DB954;
+  --essential-bright-accent: #1ed760;
+  --background-base-alpha: rgba(255,255,255,0.7);
+  --background-press-alpha: rgba(240, 240, 240, 0.8);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  font-family: "CircularSp", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  overflow: hidden;
+  background-color: #000;
+  color: var(--text-base);
+}
+body.dragging {
+  cursor: grabbing;
+}
+body.dragging * {
+  user-select: none;
+  pointer-events: none;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: hsla(0,0%,100%,.3);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsla(0,0%,100%,.5);
+}
